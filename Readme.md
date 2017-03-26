@@ -3,4 +3,17 @@ References
 2. http://llvm.org/docs/doxygen/html/classllvm_1_1Instruction.html
 3. http://llvm.org/docs/doxygen/html/classllvm_1_1Loop.html
 
-Also, I made an error in my previous assignment(recursing over all the loops) which I noticed while doing this assignment. So, I'm resubmitting it along with this assignment. If you haven't evaluated already, I request you to consider the newer submission. 
+Algorithm:
+
+LICM(Loop L){
+  for(each basic block BB dominated by loop header in preorder on dominator tree){
+    if(BB is immediately within L){
+      for(each instruction I in BB){
+        if(isLoopInvariant(I) && safeToHoist(I))
+          move I to preheader basic block;
+      }
+    }
+  }
+}
+
+Detailed algorithm can be found in the attached PDF.
