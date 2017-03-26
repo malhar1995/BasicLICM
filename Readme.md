@@ -5,7 +5,7 @@ References
 
 Algorithm:
 
-LICM(Loop L){
+```LICM(Loop L){
   for(each basic block BB dominated by loop header in preorder on dominator tree){
     if(BB is immediately within L){
       for(each instruction I in BB){
@@ -15,5 +15,6 @@ LICM(Loop L){
     }
   }
 }
+```
 
 Detailed algorithm can be found in the attached PDF.
