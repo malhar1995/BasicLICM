@@ -4,8 +4,8 @@ References
 3. http://llvm.org/docs/doxygen/html/classllvm_1_1Loop.html
 
 Algorithm:
-
-```LICM(Loop L){
+```
+LICM(Loop L){
   for(each basic block BB dominated by loop header in preorder on dominator tree){
     if(BB is immediately within L){
       for(each instruction I in BB){
