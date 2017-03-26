@@ -15,5 +15,4 @@ LICM(Loop L){
     }
   }
 }
-
 Detailed algorithm can be found in the attached PDF.
